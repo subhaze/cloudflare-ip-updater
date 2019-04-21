@@ -1,5 +1,7 @@
 # cloudflare-ip-updater
-Used as a Dynamic DNS updater for Cloudflare on Synology NAS
+Used as a Dynamic DNS updater for Cloudflare on Synology NAS.
+
+The image size is roughly 15MB.
 
 ## Environment variables needed
 
