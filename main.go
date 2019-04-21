@@ -71,6 +71,11 @@ func updateIP(site string, domain string, ip string, res http.ResponseWriter) {
 }
 
 func main() {
+	fmt.Println("Cloudflare ip updater server started.")
 	http.HandleFunc("/cf-ip-update", handleIPUpdate)
+	http.HandleFunc("/", func(res http.ResponseWriter, req *http.Request) {
+		res.WriteHeader(200)
+		res.Write([]byte("running"))
+	})
 	http.ListenAndServe(":8080", nil)
 }
