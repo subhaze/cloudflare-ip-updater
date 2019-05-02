@@ -76,6 +76,7 @@ func main() {
 	http.HandleFunc("/", func(res http.ResponseWriter, req *http.Request) {
 		res.WriteHeader(200)
 		res.Write([]byte("running"))
+		fmt.Printf("[info] server home pinged")
 	})
 	http.ListenAndServe(":8080", nil)
 }
